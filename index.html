@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dearest B — The B-day Book Vol. 26</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<main id="stage" aria-label="Birthday booklet">
+<div id="book">
+ <!-- Leaf 0: Page 1 (cover) | Page 2 (envelope + letter) -->
+ <section class="leaf" data-leaf="0">
+  <div class="face front p1"><button class="cover" aria-label="Open the booklet"><img class="art" src="assets/pg-01.jpg" alt="Cover: Dearest B, The B-day Book Vol. 26" draggable="false"></button></div>
+  <div class="face back p2" style="background-image:url(assets/bg2.jpg)">
+   <div class="env" id="env">
+    <img class="envC" src="assets/env_closed.png" alt="" draggable="false">
+    <img class="envO" src="assets/env_open.png" alt="" draggable="false">
+    <button id="envBtn" aria-label="Open the envelope"></button>
+   </div>
+   <div class="clip" id="clip"><button id="letter" class="letter" tabindex="-1" aria-label="Read the letter larger"><img src="assets/pg-04.jpg" alt="Letter: Where Ordinary Days Become History" draggable="false"></button></div>
+  </div>
+ </section>
+ <!-- Leaf 1: Page 3 (cake + 3 candles) | Page 4 (Make a Wish) -->
+ <section class="leaf" data-leaf="1">
+  <div class="face front p3" style="background-image:url(assets/bg_cake.jpg)" aria-label="Birthday cake with three candles">
+   <button class="candle" data-i="1" style="left:45.41%;top:61.97%" aria-label="Blow out candle 2"><img class="stick" src="assets/candle_stick.png" alt=""><img class="flame" src="assets/candle_flame.png" alt=""><i class="smoke"></i></button>
+   <button class="candle" data-i="0" style="left:28.24%;top:68.1%" aria-label="Blow out candle 1"><img class="stick" src="assets/candle_stick.png" alt=""><img class="flame" src="assets/candle_flame.png" alt=""><i class="smoke"></i></button>
+   <button class="candle" data-i="2" style="left:61.33%;top:68.1%" aria-label="Blow out candle 3"><img class="stick" src="assets/candle_stick.png" alt=""><img class="flame" src="assets/candle_flame.png" alt=""><i class="smoke"></i></button>
+  </div>
+  <div class="face back p4"><img class="art" src="assets/pg-06.jpg" alt="Make a wish... and may all your dreams come true" draggable="false"></div>
+ </section>
+ <!-- Leaf 2: Page 5 (Made your wish? -> My Wish) | Page 6 (Little Things) -->
+ <section class="leaf" data-leaf="2">
+  <div class="face front p5">
+   <div class="sheet yet" id="yet" role="button" tabindex="0" aria-label="Made your wish, yet? Tap to turn"><img src="assets/pg-07.jpg" alt="Made your wish, yet?" draggable="false"></div>
+   <div class="sheet my" id="my"><img src="assets/pg-08.jpg" alt="My Wish" draggable="false"></div>
+  </div>
+  <div class="face back p6"><img class="art" src="assets/pg-09.jpg" alt="Little things about you" draggable="false"></div>
+ </section>
+ <!-- Leaf 3: Page 7 (Our Moments) | Page 8 (Lyrics) -->
+ <section class="leaf" data-leaf="3">
+  <div class="face front p7"><img class="art" src="assets/pg-10.jpg" alt="Our moments" draggable="false"></div>
+  <div class="face back p8"><img class="art" src="assets/pg-11.jpg" alt="Lyrics that remind me of you" draggable="false"></div>
+ </section>
+ <!-- Leaf 4: Page 9 (Lyrics) | Page 10 (back cover) -->
+ <section class="leaf" data-leaf="4">
+  <div class="face front p9"><img class="art" src="assets/pg-12.jpg" alt="Lyrics that remind me of you" draggable="false"></div>
+  <div class="face back p10"><img class="art" src="assets/pg-13.jpg" alt="Back cover: I love you, forever and always." draggable="false"><button id="restart" type="button" aria-label="Read the booklet again">&#8634; Read again</button></div>
+ </section>
+ <div id="crease"></div>
+</div>
+</main>
+<p id="hint" aria-live="polite"></p>
+<div id="zoom" hidden><img src="assets/pg-04.jpg" alt="Letter, enlarged" draggable="false"></div>
+<audio id="bgm" loop preload="none"></audio>
+<script src="script.js"></script>
+</body></html>
